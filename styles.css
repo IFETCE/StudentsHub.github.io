@@ -20,28 +20,40 @@ body {
     padding: 20px;
     background-color: #000;
     color: #fff;
+    /* position: relative;
+    flex-wrap: wrap; */
 }
 
 .logo {
     display: flex;
     align-items: center;
+    /* flex: 1; */
+}
+
+.logo h1 {
+    font-size: 1.2rem;
 }
 
 .circle {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: #666;
     border-radius: 50%;
     margin-right: 10px;
 }
 
 .search-bar {
+    flex-grow: 1;
+    flex: 1;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .search-bar input {
     padding: 8px;
+    width: 300px;
+    max-width: 100%;
     border: none;
     border-radius: 5px 0 0 5px;
     outline: none;
@@ -54,6 +66,21 @@ body {
     background-color: #333;
     color: #fff;
     cursor: pointer;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    /* flex: 1;
+    justify-content: flex-end; */
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
 }
 
 /* Carousel */
@@ -155,3 +182,31 @@ body {
 .btn:hover {
     background-color: #ddd;
 }
+
+/* Responsive adjustments */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Keep items in a single row */
+        justify-content: space-between; /* Space between logo and profile */
+        align-items: center; /* Center items vertically */
+    }
+
+    .logo {
+        margin-right: 0; /* Keep logo's margin as needed */
+    }
+
+    .profile-section {
+        margin-left: 0; /* Remove left margin on mobile */
+        align-self: center; /* Center profile section vertically */
+    }
+
+    .search-bar {
+        margin-top: 10px; /* Add margin for spacing */
+        justify-content: center; /* Center the search bar */
+        width: 100%; /* Full width for search bar */
+    }
+}
+
+
+
